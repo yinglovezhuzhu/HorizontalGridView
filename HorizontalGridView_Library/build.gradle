@@ -40,5 +40,4 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile files('libs/android-support-v4.jar')
-    compile files('libs/android-support-v7-recyclerview.jar')
 }

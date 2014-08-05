@@ -20,7 +20,7 @@ package com.opensource.widget.horizontalgridview;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -28,6 +28,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.opensource.widget.HorizontalGridView;
+import com.opensource.widget.OnChildSelectedListener;
+import com.opensource.widget.RecyclerView;
 
 
 public class MainActivity extends Activity {
@@ -45,17 +47,32 @@ public class MainActivity extends Activity {
                 ImageView iv = new ImageView(MainActivity.this);
                 iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 iv.setImageResource(R.drawable.ic_launcher);
-                return new ViewHolder(iv);
+                final RecyclerView.ViewHolder viewHolder = new ViewHolder(iv);
+                //TODO 把Item的点击事件在这里做，调用View.setOnClickListener(View.OnClickListener)，然后用viewHoder.getPosition()来获取点击的位置
+                //以同样的方法可以实现OnLongClickListener等
+                viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mHorizontalGridView.setSelectedPosition(viewHolder.getPosition());
+                    }
+                });
+                return viewHolder;
             }
 
             @Override
             public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) {
-
+                //TODO 把一些View的相关改变在这里实现
             }
 
             @Override
             public int getItemCount() {
                 return 50;
+            }
+        });
+        mHorizontalGridView.setOnChildSelectedListener(new OnChildSelectedListener() {
+            @Override
+            public void onChildSelected(ViewGroup parent, View view, int position, long id) {
+                Log.i("MainActivity", "Item " + position + " was selected");
             }
         });
     }

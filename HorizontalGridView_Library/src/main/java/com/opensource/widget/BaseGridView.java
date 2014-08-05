@@ -20,14 +20,13 @@ package com.opensource.widget;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Rect;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
 
 /**
  * Base class for vertically and horizontally scrolling lists. The items come
- * from the {@link android.support.v7.widget.RecyclerView.Adapter} associated with this view.
+ * from the {@link com.opensource.widget.RecyclerView.Adapter} associated with this view.
  * @hide
  */
 abstract class BaseGridView extends RecyclerView {

@@ -18,7 +18,7 @@
 
 package com.opensource.widget;
 
-import static android.support.v7.widget.RecyclerView.HORIZONTAL;
+import static com.opensource.widget.RecyclerView.HORIZONTAL;
 import static com.opensource.widget.BaseGridView.WINDOW_ALIGN_BOTH_EDGE;
 import static com.opensource.widget.BaseGridView.WINDOW_ALIGN_HIGH_EDGE;
 import static com.opensource.widget.BaseGridView.WINDOW_ALIGN_LOW_EDGE;

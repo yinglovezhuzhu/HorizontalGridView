@@ -20,10 +20,6 @@ package com.opensource.widget;
 import android.content.Context;
 import android.graphics.PointF;
 import android.graphics.Rect;
-import android.support.v7.widget.LinearSmoothScroller;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.Recycler;
-import android.support.v7.widget.RecyclerView.State;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.FocusFinder;
@@ -36,15 +32,18 @@ import android.view.ViewParent;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 
+import com.opensource.widget.RecyclerView.Recycler;
+import com.opensource.widget.RecyclerView.State;
+
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.support.v7.widget.RecyclerView.HORIZONTAL;
-import static android.support.v7.widget.RecyclerView.NO_ID;
-import static android.support.v7.widget.RecyclerView.NO_POSITION;
-import static android.support.v7.widget.RecyclerView.VERTICAL;
+import static com.opensource.widget.RecyclerView.HORIZONTAL;
+import static com.opensource.widget.RecyclerView.NO_ID;
+import static com.opensource.widget.RecyclerView.NO_POSITION;
+import static com.opensource.widget.RecyclerView.VERTICAL;
 
 final class GridLayoutManager extends RecyclerView.LayoutManager {
 
@@ -1381,7 +1380,7 @@ final class GridLayoutManager extends RecyclerView.LayoutManager {
         }
     }
 
-    private void removeAndRecycleAllViews(Recycler recycler) {
+    public void removeAndRecycleAllViews(RecyclerView.Recycler recycler) {
         if (DEBUG) Log.v(TAG, "removeAndRecycleAllViews " + getChildCount());
         for (int i = getChildCount() - 1; i >= 0; i--) {
             removeAndRecycleViewAt(i, recycler);

@@ -28,14 +28,13 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.Shader;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 
 /**
  * A view that shows items in a horizontal scrolling list. The items come from
- * the {@link android.support.v7.widget.RecyclerView.Adapter} associated with this view.
+ * the {@link com.opensource.widget.RecyclerView.Adapter} associated with this view.
  */
 public class HorizontalGridView extends BaseGridView {
 

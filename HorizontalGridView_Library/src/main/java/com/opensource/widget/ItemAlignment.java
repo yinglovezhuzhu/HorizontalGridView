@@ -24,9 +24,9 @@ import android.view.ViewGroup;
 
 import com.opensource.widget.GridLayoutManager.LayoutParams;
 
-import static android.support.v7.widget.RecyclerView.HORIZONTAL;
-import static android.support.v7.widget.RecyclerView.VERTICAL;
 import static com.opensource.widget.BaseGridView.ITEM_ALIGN_OFFSET_PERCENT_DISABLED;
+import static com.opensource.widget.RecyclerView.HORIZONTAL;
+import static com.opensource.widget.RecyclerView.VERTICAL;
 
 /**
  * Defines alignment position on two directions of an item view. Typically item
