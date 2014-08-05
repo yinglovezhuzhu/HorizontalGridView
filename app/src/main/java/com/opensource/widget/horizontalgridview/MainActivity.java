@@ -50,6 +50,7 @@ public class MainActivity extends Activity {
                 final RecyclerView.ViewHolder viewHolder = new ViewHolder(iv);
                 //TODO 把Item的点击事件在这里做，调用View.setOnClickListener(View.OnClickListener)，然后用viewHoder.getPosition()来获取点击的位置
                 //以同样的方法可以实现OnLongClickListener等
+                //注意：RecyclerView.ViewHolder不能直接添加监听，可以用RecyclerView.ViewHolder.itemView添加监听
                 viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
