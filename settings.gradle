@@ -16,4 +16,4 @@
  * limitations under the License.
  */
 
-include ':app', ':HorizontalGridView_Library'
+include ':app', ':library'
