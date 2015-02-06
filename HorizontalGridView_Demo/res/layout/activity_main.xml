@@ -35,6 +35,6 @@
         gridview:numberOfRows="1"
         gridview:horizontalMargin="2dip"
         gridview:verticalMargin="1dip"
-        android:gravity="center"/>
+        android:gravity="top"/>
 
 </RelativeLayout>
